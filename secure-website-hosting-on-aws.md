@@ -2,21 +2,4 @@
 **Objective**</br>
 Deploy a website on an EC2 instance and make it accessible securely through a custom domain using HTTPS.</br>
 **Architecture**
-Internet
-│
-▼
-https://lerntechnology.online
-│
-▼
-Route 53
-│
-▼
-Application Load Balancer
-(HTTPS : 443)
-│
-▼
-Target Group
-│
-▼
-EC2 Instance
-Apache (80)
+![img.png](img.png)
