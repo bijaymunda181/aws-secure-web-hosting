@@ -22,7 +22,7 @@ sudo systemctl enable httpd
 **Verify:**</br>
 systemctl status httpd</br>
 **Create sample page:**</br>
-echo "<h1>AWS HTTPS Project - Bijay</h1>" | sudo tee /var/www/html/index.html </br>
+- echo "<h1>AWS HTTPS Project - Bijay</h1>" | sudo tee /var/www/html/index.html </br>
 **Test the website:**</br>
 curl localhost</br>
 
