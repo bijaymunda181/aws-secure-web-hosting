@@ -41,5 +41,14 @@ Health check should be healthy</br>
 
 
 ## Step 3: Create Application Load Balancer
-
-
+**Navigate:**</br>
+EC2 → Load Balancers</br>
+**Create:**</br>
+Type: Application Load Balancer</br>
+Scheme: Internet-facing</br>
+**Listeners**</br>
+HTTP : 80</br>
+**Availability Zones:**</br>
+Select at least 2 Ability Zone</br>
+**Attach:**</br>
+Target Group</br>
