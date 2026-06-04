@@ -89,8 +89,15 @@ ALB → Listeners</br>
 **Add:**</br>
 Protocol: HTTPS</br>
 Port: 443</br>
-**Select:**
+**Select:**</br>
 ACM Certificate</br>
 lerntechnology.online
 **Forward to:**</br>
 Target Group</br>
+## Step 8: Redirect HTTP to HTTPS
+**Edit HTTP Listener.**</br>
+**Configure:**</br>
+Action: Redirect</br>
+Protocol: HTTPS</br>
+Port: 443</br>
+Status Code: 301</br>
