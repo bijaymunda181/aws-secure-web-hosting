@@ -101,3 +101,27 @@ Action: Redirect</br>
 Protocol: HTTPS</br>
 Port: 443</br>
 Status Code: 301</br>
+**Result:**</br>
+http://lerntechnology.online<br>
+↓</br>
+https://lerntechnology.online</br>
+## Step 9: Create Route 53 Alias Records
+**Root Domain**</br>
+Type: A</br>
+Name: (blank)</br>
+Alias: Yes</br>
+Target: ALB</br>
+**Supports:**</br>
+https://lerntechnology.online</br>
+**WWW Domain**</br>
+Type: A</br>
+Name: www</br>
+Alias: Yes</br>
+Target: Same ALB</br>
+## Step 10: Validation
+**Check:**</br>
+curl -I https://lerntechnology.online</br>
+**Expected:**</br>
+HTTP/2 200</br>
+**Browser should show:**</br>
+🔒 Secure Connection</br>
