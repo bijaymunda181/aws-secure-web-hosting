@@ -53,4 +53,44 @@ Select at least 2 Ability Zone</br>
 **Attach:**</br>
 Target Group</br>
 
-## 
+## Step 4: Configure Security Groups
+**ALB Security Group**</br>
+Inbound:</br>
+80   0.0.0.0/0
+443  0.0.0.0/0
+
+**EC2 Security Group**</br>
+Inbound:</br>
+80  Source = ALB Security Group</br>
+22  Your IP</br>
+
+## Step 5: Create Route 53 Hosted Zone
+**Navigate:**
+Route 53 → Hosted Zones</br>
+**Create**</br>
+lerntechnology.online</br>
+Copy Name Servers</br>
+Update Name Servers at domain registrar.</br>
+
+## Step 6: Request SSL Certificate
+**Navigate:**</br>
+AWS Certificate Manager</br>
+**Request:**</br>
+lerntechnology.online</br>
+www.lerntechnology.online</br>
+**Validation:**</br>
+DNS Validation</br>
+Create validation records in Route 53.</br>
+**Wait until:**
+Issued</br>
+## Step 7: Add HTTPS Listener
+**Navigate:**</br>
+ALB → Listeners</br>
+**Add:**</br>
+Protocol: HTTPS</br>
+Port: 443</br>
+**Select:**
+ACM Certificate</br>
+lerntechnology.online
+**Forward to:**</br>
+Target Group</br>
