@@ -56,8 +56,8 @@ Target Group</br>
 ## Step 4: Configure Security Groups
 **ALB Security Group**</br>
 Inbound:</br>
-80   0.0.0.0/0
-443  0.0.0.0/0
+80   0.0.0.0/0</br>
+443  0.0.0.0/0</br>
 
 **EC2 Security Group**</br>
 Inbound:</br>
@@ -81,7 +81,7 @@ www.lerntechnology.online</br>
 **Validation:**</br>
 DNS Validation</br>
 Create validation records in Route 53.</br>
-**Wait until:**
+**Wait until:**</br>
 Issued</br>
 ## Step 7: Add HTTPS Listener
 **Navigate:**</br>
@@ -91,7 +91,7 @@ Protocol: HTTPS</br>
 Port: 443</br>
 **Select:**</br>
 ACM Certificate</br>
-lerntechnology.online
+lerntechnology.online</br>
 **Forward to:**</br>
 Target Group</br>
 ## Step 8: Redirect HTTP to HTTPS
